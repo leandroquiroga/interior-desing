@@ -1,0 +1,68 @@
+/* Google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Montserrat:wght@300;400;600&display=swap'); 
+/* 
+font-family: 'Lora', serif;
+font-family: 'Montserrat', sans-serif;
+*/
+
+/* General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #202020
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Menu bar */
+.container > nav{
+    display: inline-flex;
+    height: 65px;
+    padding: 10px;
+    margin: 25px 0;
+    justify-content: space-between;
+}
+
+.container > nav .menu-bar,
+.container > nav > button{
+    margin: 10px 25px;
+    padding: 10px;
+}
+
+/* Button */
+.container > nav button{
+    font: 14px 'Lora', serif;
+    background-color: #202020;
+    color:#fff;
+    border: 1px solid #fff;
+    height: 40px;
+    width: 125px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Items */
+.container > nav .menu-bar > .list{
+    display: inline-flex;
+    width: 475px;
+    justify-content: space-between;
+}
+
+.container > nav .menu-bar > .list .items{
+    list-style: none;
+    font: bold 15px 'Montserrat', sans-serif;
+    cursor: pointer;
+    color: #fefefe
+}
+
+/* Efect hover*/
+.container > nav .menu-bar > .list .items:hover{
+    border-bottom: 3px solid #fefefe;
+}
