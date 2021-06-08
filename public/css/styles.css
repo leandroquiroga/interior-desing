@@ -19,6 +19,7 @@ body{
 .container{
     display: flex;
     flex-direction: column;
+    border: 1px solid #fefefe;
 }
 
 /* Menu bar */
@@ -31,7 +32,8 @@ body{
 }
 
 .container > nav .menu-bar,
-.container > nav > button{
+.container > nav > button,
+.container .central{
     margin: 10px 25px;
     padding: 10px;
 }
@@ -65,4 +67,46 @@ body{
 /* Efect hover*/
 .container > nav .menu-bar > .list .items:hover{
     border-bottom: 3px solid #fefefe;
+}
+
+/* Central */
+.container .central{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #fefefe;
+    padding: 10px;
+}
+
+/* Description */
+.container .central > .description{
+    border: 1px solid #fefefe;
+    width: 40%;
+}
+
+/* Title */
+.container .central > .description > .title{
+    font: bold 35px 'Lora', serif;
+}
+
+/* Description */
+.container .central > .description .text-description{
+    font: 25px 'Montserrat', sans-serif
+}
+
+.container .central > .description > .title,
+.container .central > .description .text-description,
+.container .central > .description .boton{
+    color: #fefefe;
+    margin: 25px 0;
+}
+
+.container .central > .description .boton{
+    border: none;
+    background-color: #202020;
+    font: 18px 'Montserrat', sans-serif;
+}
+
+.container .central > .description .boton,
+.container .central > .description > .title{
+    line-height: 60px;
 }
