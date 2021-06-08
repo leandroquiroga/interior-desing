@@ -15,26 +15,31 @@ font-family: 'Montserrat', sans-serif;
 body{
     background-color: #202020
 }
-
-.container{
+.general{
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
     flex-direction: column;
-    border: 1px solid #fefefe;
+    width: 90%;
 }
 
 /* Menu bar */
 .container > nav{
     display: inline-flex;
+    align-items: center;
     height: 65px;
     padding: 10px;
     margin: 25px 0;
+    width: 100%;
     justify-content: space-between;
 }
 
 .container > nav .menu-bar,
 .container > nav > button,
 .container .central{
-    margin: 10px 25px;
+    margin: 10px 0;
     padding: 10px;
 }
 
@@ -69,17 +74,18 @@ body{
     border-bottom: 3px solid #fefefe;
 }
 
+.general .container nav{
+    margin-bottom: 80px;
+}
 /* Central */
-.container .central{
+.general .container .central{
     display: flex;
     flex-direction: row;
-    border: 1px solid #fefefe;
-    padding: 10px;
+    width: 100%;
 }
 
 /* Description */
 .container .central > .description{
-    border: 1px solid #fefefe;
     width: 40%;
 }
 
@@ -90,7 +96,9 @@ body{
 
 /* Description */
 .container .central > .description .text-description{
-    font: 25px 'Montserrat', sans-serif
+    font: 23px 'Montserrat', sans-serif;
+    overflow: hidden;
+    width: 75%;
 }
 
 .container .central > .description > .title,
@@ -104,9 +112,79 @@ body{
     border: none;
     background-color: #202020;
     font: 18px 'Montserrat', sans-serif;
+    cursor: pointer;
 }
 
 .container .central > .description .boton,
 .container .central > .description > .title{
     line-height: 60px;
+}
+
+/* Image */
+.container .central .img-living{ 
+    width: 60%;
+}   
+
+.container .central .img-living > .img{
+    width: 100%;
+}
+
+/* Card */
+.container .card-profile{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    margin: -85px 40px
+}
+
+
+.container .card {
+    flex-direction: column;     
+    width: 360px;
+    height: 150px;
+    border: none;
+    background-color: #202020;
+}
+
+.container .card > .title-box{
+    flex-direction: row;
+    display: flex;
+}
+
+.container .card > .title-box .img-card .profile{
+    width: 60px;
+    border-radius: 55px;
+}
+
+.container .card > .title-box .img-card .profile,
+.container .card > .title-box .text-card,
+.container .card .textHelp{
+    margin-left: 25px;
+}
+
+.container .card > .title-box .text-card .name,
+.container .card > .title-box .text-card .descrip-profile,
+.container .card .textHelp{
+    color: #fefefe;
+    font: 15px 'Montserrat', sans-serif;
+    line-height: 25px;
+}
+
+.container .card .textHelp{
+    display: flex;
+    width: 75%;
+    margin-top: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer*/
+
+.container-footer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 150px;
+    color: #fefefe;
+    font: 15px 'Monserrat', sans-serif;
 }
