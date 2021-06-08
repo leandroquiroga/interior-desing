@@ -1,0 +1,22 @@
+{
+  "name": "interior-desing",
+  "version": "1.0.0",
+  "description": "interior desing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leandroquiroga/interior-desing.git"
+  },
+  "keywords": [
+    "interio"
+  ],
+  "author": "leandro quiroga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leandroquiroga/interior-desing/issues"
+  },
+  "homepage": "https://github.com/leandroquiroga/interior-desing#readme"
+}
