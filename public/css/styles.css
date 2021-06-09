@@ -37,14 +37,19 @@ body{
 }
 
 /* Icon menu */
-.container > nav > .nav-menu{
+.container > nav > .nav-menu,
+.container > nav .menu-bar > .nav-close{
     position: absolute;
     right: 5%;
     top: 30px;
     transform: translate(10%, 0%);
     display: none;
+    z-index: 0;
+    cursor: pointer;
 }
-.container > nav > .nav-menu > .menu-classic{
+
+.container > nav > .nav-menu > .menu-classic,
+.container > nav  .nav-close > .close-classic{
     width: 55px;
 }
 
@@ -266,7 +271,6 @@ body{
         transition: transform .5s ease-in-out;
         transform: translateY( -800px);
         background-color: #202020;
-        z-index: 1;
         width: 100%;
         height: 100%;
         display: flex;
@@ -274,7 +278,10 @@ body{
         align-items: center;
         justify-content: center;
     }
-
+    .container > nav  .nav-close{
+        display: block;
+        z-index: 1;
+    }
     .general > .container nav .menu-bar .show{
         transform: translateY( 0px);
     }
@@ -283,9 +290,6 @@ body{
         color: #fefefe;
         font-size: 20px;
         line-height: 60px;
-    }
-    .general .container nav .menu-bar .list > .items:hover{
-        border: none;
     }
     .general .container > nav > .nav-menu{
         display: flex;
