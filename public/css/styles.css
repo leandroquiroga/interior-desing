@@ -36,8 +36,20 @@ body{
     justify-content: space-between;
 }
 
+/* Icon menu */
+.container > nav > .nav-menu{
+    position: absolute;
+    right: 5%;
+    top: 30px;
+    transform: translate(10%, 0%);
+    display: none;
+}
+.container > nav > .nav-menu > .menu-classic{
+    width: 55px;
+}
+
 .container > nav .menu-bar,
-.container > nav > button,
+.container > nav  button,
 .container .central{
     margin: 10px 0;
     padding: 10px;
@@ -134,15 +146,16 @@ body{
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-start;
-    margin: -85px 40px
+    margin: -85px 40px;
+    z-index: 2;
 }
 
 
 .container .card {
     flex-direction: column;     
-    width: 360px;
-    height: 150px;
-    border: none;
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #fefefe;
     background-color: #202020;
 }
 
@@ -166,7 +179,7 @@ body{
 .container .card > .title-box .text-card .descrip-profile,
 .container .card .textHelp{
     color: #fefefe;
-    font: 15px 'Montserrat', sans-serif;
+    font: 13px 'Montserrat', sans-serif;
     line-height: 25px;
 }
 
@@ -177,14 +190,115 @@ body{
     justify-content: center;
     align-items: center;
 }
-
 /* Footer*/
 
 .container-footer{
     display: flex;
+    width: 100%;
+    height: 100px;
     justify-content: center;
-    align-items: flex-end;
-    height: 150px;
+    align-items: center;
     color: #fefefe;
+    margin-top: 70px;
+    padding-top: 25px;
+}
+
+.container-footer > .redes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+.container-footer span{
+    align-items: flex-end;
     font: 15px 'Monserrat', sans-serif;
+}
+
+/* Icon */
+.container-footer > .redes > .list-redes a{
+    text-decoration: none;
+    color: #fefefe;
+    justify-content: center;
+}
+.container-footer > .redes > .list-redes > a > .bi{
+    margin: 10px 15px;
+}
+
+/* Responsive table*/
+
+@media screen and (max-width: 896px){
+    .general .container nav{
+        margin-bottom: 10px;
+    }
+    .general .container .central{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .container .central > .description{
+        width: 100%;
+    }
+    /* Description */
+    .container .central > .description .text-description{
+        font: 23px 'Montserrat', sans-serif;
+        overflow: hidden;
+        width: 100%;
+    }
+    /* Image */
+    .container .central .img-living{ 
+        width: 100%;
+    }   
+
+    /* Card */
+    .container .card {    
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 769px){
+    .general .container nav .list{
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: none;
+        transition: transform .5s ease-in-out;
+        transform: translateY( -800px);
+        background-color: #202020;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .general > .container nav .menu-bar .show{
+        transform: translateY( 0px);
+    }
+
+    .general .container nav .menu-bar .list > .items{
+        color: #fefefe;
+        font-size: 20px;
+        line-height: 60px;
+    }
+    .general .container nav .menu-bar .list > .items:hover{
+        border: none;
+    }
+    .general .container > nav > .nav-menu{
+        display: flex;
+    }
+
+}
+
+@media screen and (max-width: 679px){
+    .container .card .textHelp{ 
+        width: 85%;
+    }
+    .container .card {    
+        width: 90%;
+    }
+    
 }
